@@ -38,11 +38,11 @@ class Caltech(VisionDataset):
           if folder.find("BACKGROUND")<0:
             for img in os.listdir(root+"/"+folder):
             #print(img)
-            p=folder+"/"+img
-            if p in to_keep:
-              labels.append(folder)
-              d=pil_loader(root+"/"+folder+"/"+img)
-              data.append(d)
+                p=folder+"/"+img
+                if p in to_keep:
+                  labels.append(folder)
+                  d=pil_loader(root+"/"+folder+"/"+img)
+                  data.append(d)
 
         labels=[]
         el_root=[i for i in os.listdir(root) if i.find("BACKGROUND")<0]
