@@ -40,7 +40,7 @@ class Caltech(VisionDataset):
             #print(img)
                 p=folder+"/"+img
                 if p in to_keep:
-                  labels.append(folder)
+                  labels_cat.append(folder)
                   d=pil_loader(root+"/"+folder+"/"+img)
                   data.append(d)
 
