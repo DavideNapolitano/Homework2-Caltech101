@@ -48,7 +48,7 @@ class Caltech(VisionDataset):
         el_root=[i for i in os.listdir(root) if i.find("BACKGROUND")<0]
         tot_cat=sorted(el_root)
         for lc in labels_cat:
-          for i,c in tot_cat:
+          for i,c in enumerate(tot_cat):
             if lc == c:
               labels.append(i)
 
