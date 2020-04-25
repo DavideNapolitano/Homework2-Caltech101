@@ -56,7 +56,6 @@ class Caltech(VisionDataset):
         self.data=data
         self.labels=labels
         self.transform=transform
-        Ciao
 
        # '''
        #- Here you should implement the logic for reading the splits files and accessing elements
