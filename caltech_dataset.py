@@ -6,9 +6,6 @@ import os
 import os.path
 import sys
 
-def Ciao
-    print("CIAO!")
-    return
 
 def pil_loader(path):
     # open path as file to avoid ResourceWarning (https://github.com/python-pillow/Pillow/issues/835)
@@ -69,6 +66,8 @@ class Caltech(VisionDataset):
          # through the index
         #- Labels should start from 0, so for Caltech you will have lables 0...100 (excluding the background class)  -DONE
         #'''
+    def Ciao:
+        return print("CIAO!")
 
     def __getitem__(self, index):
         #'''
