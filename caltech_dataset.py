@@ -5,6 +5,9 @@ from PIL import Image
 import os
 import os.path
 import sys
+from skimage.transform import rotate, AffineTransform, warp
+from skimage.util import random_noise
+from skimage.filters import gaussian
 
 
 def pil_loader(path):
