@@ -66,9 +66,7 @@ class Caltech(VisionDataset):
          # through the index
         #- Labels should start from 0, so for Caltech you will have lables 0...100 (excluding the background class)  -DONE
         #'''
-    def Ciao:
-        return print("CIAO!")
-
+        
     def __getitem__(self, index):
         #'''
         #__getitem__ should access an element through its index
