@@ -6,6 +6,9 @@ import os
 import os.path
 import sys
 
+def Ciao
+    print("CIAO!")
+    return
 
 def pil_loader(path):
     # open path as file to avoid ResourceWarning (https://github.com/python-pillow/Pillow/issues/835)
@@ -56,6 +59,7 @@ class Caltech(VisionDataset):
         self.data=data
         self.labels=labels
         self.transform=transform
+        Ciao
 
        # '''
        #- Here you should implement the logic for reading the splits files and accessing elements
