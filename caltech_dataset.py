@@ -36,6 +36,7 @@ class Caltech(VisionDataset):
           if line.find("BACKGROUND") < 0: #non è presente
             to_keep.append(line.rstrip("\n"))
 
+        # read data starting from the root
         labels_cat=[]
         data=[]
         for folder in os.listdir(root):
