@@ -23,12 +23,14 @@ class Caltech(VisionDataset):
 
         self.split = split # This defines the split you are going to use
                            # (split files are called 'train.txt' and 'test.txt')
-
+        
+        # read the txt files(train/test) starting from the root and the kind of split
         r=root.split("/")                   
         input=[]
         with open(r[0]+"/"+split+".txt", 'r') as f:
             input = f.readlines()
-
+            
+        # select all folders except BACKGROUND from the .txt file
         to_keep=[]
         for line in input:
           if line.find("BACKGROUND") < 0: #non è presente
@@ -42,11 +44,12 @@ class Caltech(VisionDataset):
             for img in os.listdir(root+"/"+folder):
             #print(img)
                 p=folder+"/"+img
-                if p in to_keep:
+                if p in to_keep: # check if i have to use that file
                   labels_cat.append(folder)
-                  d=pil_loader(root+"/"+folder+"/"+img)
+                  d=pil_loader(root+"/"+folder+"/"+img) # Transform data
                   data.append(d)
 
+        # convert label from categorical to integer
         labels=[]
         el_root=[i for i in os.listdir(root) if i.find("BACKGROUND")<0]
         tot_cat=sorted(el_root)
